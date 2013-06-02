@@ -20,7 +20,7 @@ class SNESpaduino
 		uint16_t getButtons(void);
 	private:
 		uint16_t state;
-		int i, PIN_LATCH, PIN_CLOCK, PIN_DATA;
+		byte i, PIN_LATCH, PIN_CLOCK, PIN_DATA;
 };
 
 #endif
