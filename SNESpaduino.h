@@ -16,7 +16,7 @@
 class SNESpaduino
 {
 	public:
-		SNESpaduino(int latch, int clock, int data);
+		SNESpaduino(byte latch, byte clock, byte data);
 		uint16_t getButtons(void);
 	private:
 		uint16_t state;

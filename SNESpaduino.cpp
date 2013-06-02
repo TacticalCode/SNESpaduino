@@ -12,7 +12,7 @@
 #include "SNESpaduino.h"
 
 // Constructor: Init pins
-SNESpaduino::SNESpaduino(int latch, int clock, int data)
+SNESpaduino::SNESpaduino(byte latch, byte clock, byte data)
 {
 	// Store the latch, clock and data pin for later use
 	PIN_LATCH = latch;
