@@ -27,7 +27,7 @@ SNESpaduino::SNESpaduino(byte latch, byte clock, byte data)
 }
 
 // Return the state of all buttons. 12 of the uint16_t's bits are used, the 4 MSBs must be ignored.
-uint16_t SNESpaduino::getButtons(void)
+uint16_t SNESpaduino::getButtons(boolean return_inverted)
 {
 	// Init the button-state variable
 	state = 0;
@@ -47,6 +47,9 @@ uint16_t SNESpaduino::getButtons(void)
 		digitalWrite(PIN_CLOCK, LOW);
 	}
 
-	// Return the inverted bits, as pressed buttons are represented by a logic low (0)
-	return ~state;
+	// Return the bits
+	if(return_inverted)
+		return ~state;
+	else
+		return state;
 }

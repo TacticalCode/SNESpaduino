@@ -30,7 +30,7 @@ class SNESpaduino
 {
 	public:
 		SNESpaduino(byte latch, byte clock, byte data);
-		uint16_t getButtons(void);
+		uint16_t getButtons(boolean return_inverted = true);
 	private:
 		uint16_t state;
 		byte i, PIN_LATCH, PIN_CLOCK, PIN_DATA;
