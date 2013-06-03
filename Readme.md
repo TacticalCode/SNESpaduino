@@ -4,8 +4,11 @@
 The core function is very simple, and easy to understand through the comments in the code.
 
 Read my blogpost on this project for more information:
+
 English: http://en.tacticalcode.de/2013/06/snespaduino-super-nintendo-gamepad-for-arduino.html
+
 German: http://www.tacticalcode.de/2013/06/snespaduino-super-nintendo-gamepad-fur-arduino.html
+
 *Other post(s) to come, explaining how the gamepad actally works*
 
 ## Usage
