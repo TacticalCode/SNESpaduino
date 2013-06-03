@@ -1,9 +1,12 @@
 # SNESpaduino
 
-**SNESpaduino** is a simple library to make an Arduino communicate with a Super Nintendo (**SNES**) Gamepad.
+**SNESpaduino** is a simple library to make an Arduino communicate with a Super Nintendo ( **SNES** ) Gamepad.
 The core function is very simple, and easy to understand through the comments in the code.
 
-*Blogpost explaining everything in detail to be written*
+Read my blogpost on this project for more information:
+English: http://en.tacticalcode.de/2013/06/snespaduino-super-nintendo-gamepad-for-arduino.html
+German: http://www.tacticalcode.de/2013/06/snespaduino-super-nintendo-gamepad-fur-arduino.html
+*Other post(s) to come, explaining how the gamepad actally works*
 
 ## Usage
 
@@ -14,7 +17,9 @@ The core function is very simple, and easy to understand through the comments in
 
 ## Parse data
 
-The returned data can easily be parsed using code that will be added shortly. There will also be examples.
+The easiest way to process the incoming data is AND'ing it with the bitmasks defined as constants in `SNESpaduino.h`.
+
+Look into the `examples` directory for some code examples. Also, read the blogpost linked above for more information.
 
 ## Interfacing the SNES Gamepad
 
@@ -22,11 +27,14 @@ There are 5 wires connecting to the Gamepad: *+5V, GND, Latch, Clock, Data*.
 Connect **+5V** and **GND** to the Arduino's 5V/GND pins.
 Latch, Clock and Data can be connected to any pin that can digitally read.
 
-Detailed description to be added in the upcoming blogpost.
+Again, read the blogpost for more details :)
 
 ## License
 
-**Creative Commons Attribution-ShareAlike Unported 3.0 ( CC-BY-SA 3.0 http://creativecommons.org/licenses/by-sa/3.0/legalcode )**
+**Creative Commons Attribution-ShareAlike Unported 3.0 ( CC-BY-SA 3.0 )**
+
+http://creativecommons.org/licenses/by-sa/3.0/legalcode
+
 Feel free to contact me, if you have any questions or feedback!
 
 Author: Damon Dransfeld
