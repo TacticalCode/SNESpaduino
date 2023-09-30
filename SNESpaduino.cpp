@@ -34,17 +34,21 @@ uint16_t SNESpaduino::getButtons(boolean return_inverted)
 
 	// Latch the current buttons' state into the pad's register
 	digitalWrite(PIN_LATCH, HIGH);
+	delayMicroseconds(12); // Needs a delay for the latch to work
 	digitalWrite(PIN_LATCH, LOW);
 
-	// Loop to receive 12 bits from the pad
-	for(i = 0; i < 12; i++)
+	// Loop to receive 12 bits from the pad. There are only 12 bits
+	// used but all 16 need to be read.
+	for(i = 0; i < 16; i++) //  
 	{
 		// Read a button's state, shift it into the variable
 		state |= digitalRead(PIN_DATA) << i;
 
 		// Send a clock pulse to shift out the next bit
 		digitalWrite(PIN_CLOCK, HIGH);
+		delayMicroseconds(6); // Needs a delay for the clock to work
 		digitalWrite(PIN_CLOCK, LOW);
+		delayMicroseconds(6); // Needs a delay for the clock to work
 	}
 
 	// Return the bits
